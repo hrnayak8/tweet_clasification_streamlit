@@ -1,0 +1,5 @@
+gunicorn==19.9.0
+transformers==4.40.0
+tensorflow
+
+  

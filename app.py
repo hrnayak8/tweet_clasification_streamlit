@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-import tensorflow as tf
 from transformers import BertTokenizer, TFBertForSequenceClassification, pipeline
 import streamlit as st
 
@@ -14,11 +13,11 @@ def clean_text(text):
 def get_prediction(text):
     pred=clf.predict(text)[0]['label']
     if pred=='LABEL_0':
-    result='negative'
+        result='negative'
     elif pred=='LABEL_2':
-    result='positive'
+        result='positive'
     else:
-    result='neutral'
+        result='neutral'
     return(result)
 
 def predict_sentiment(text):
